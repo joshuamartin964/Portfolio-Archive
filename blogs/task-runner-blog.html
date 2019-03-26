@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Joshua Martin's Portfolio Website">
+  <meta name="keywords" content="Joshua Martin, Joshua, Martin, Front-end Developer, Front-end, Developer ">
+  <meta name="author" content="Joshua Martin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Are Task Runners As Good As They’re Hyped Up To Be? | Joshua Martin</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+</head>
+
+<body>
+  <main class="">
+    <header id="top">
+      <div class="nav-container">
+        <div class="title-content">
+          <h1 class="title">Joshua Martin</h1>
+          <h3 class="tag-line"><a class="contact-portal" href="#contact-me">Click To Get In Touch!</a></h3>
+        </div>
+        <nav>
+          <ul class="nav-list-items">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Portfolio</a></li>
+            <li><a id="active" href="../blogs.html">Blogs</a></li>
+            <li><a href="../cv.html">CV</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="blog-main">
+      <a href="../blogs.html">
+        <div class="back-btn">Back</div>
+      </a>
+      <div class="blog-container">
+        <h1 class="blog-title">Are Task Runners As Good As They’re Hyped Up To Be?</h1>
+        <p class="blog-content">
+          Below is a link to my GitHub with all the relevant files talked about duing this blog.
+          <a class="portfolio-contact-portal" href="https://github.com/joshuamartin964/Portfolio">Git Hub</a>
+        </p>
+        <h3 class="sub-titles">Aim:</h3>
+        <p class="blog-content">
+          The aim of this project is to learn how to help myself deploy my website by
+          learning how to use task runners to help with my version control of my site.
+        </p>
+        <br />
+        <br />
+        <h3 class="sub-titles">Objectives</h3>
+        <p class="blog-content">
+          My main objectives are:
+          <ul>
+            <li>Research what task runners are used for</li>
+            <li>Learn about how to correctly use one</li>
+            <li>Use a task runner alongside the development and deployment of my site</li>
+          </ul>
+        </p>
+        <br>
+        <br>
+        <h3 class="sub-titles">Definition:</h3>
+        <p class="blog-content">
+          To learn about task runners and why they are useful. I will be looking at Git and Gulp.js to
+          see why developers use the tools when they are coding. I will look further into this by using
+          one of these task runners alongside the development of my site to help accompany my research.
+        </p>
+        <p class="blog-content">
+          Task runners are as self-explanatory as they come. Task runners run tasks. Gulp, being the task
+          runner I decided to use for my demonstrator, can be set up to connect to a project folder, in a
+          file called gulpfile.js, to run specific tasks that you might have to do manually. Examples of
+          these tasks would be: compiling Sass files; optimising images; minify JavaScript files and many more.
+        </p>
+        <p class="quote">
+          <i>
+            “There are a lot of tasks involved with creating and deploying a front-end application.
+            Common tasks include things like watching file changes, concatenating/minifying files”
+          </i>
+          (Pennell, n.d)
+        </p>
+        <br>
+        <br>
+        <h3 class="sub-titles">Set Up:</h3>
+        <p class="blog-content">
+          To start using gulp to run any task I desire, it needs to be installed using the command line by
+          typing <strong><code>npm install –g gulp</code></strong>. This will install Gulp.js onto your device.
+        </p>
+        <p class="blog-content">
+          When setting up Gulp in the command line, you need to save Gulp as a “Dev Dependency” by writing
+          <strong><code>npm install –save-dev gulp</code></strong>. Gulp is only used on the development
+          side as it helps to run tasks so, gulp.js is saved as a development dependency. Meaning that
+          it is only local and only required during development. (Avery, 2017).
+        </p>
+        <p class="blog-content">
+          Now that Gulp is set up and installed, it’s now time to start adding files and folders to the
+          project directory. To start off with, an initial folder needs to be created. This folder is where
+          all the source code will be, all the HTML, CSS, JavaScript etc. files before they are complied. In
+          my example, I have called the folder: ‘src’.
+        </p>
+        <p class="blog-content">
+          The next thing to create is a file called ‘gulpfile.js’. As mentioned before, this file is where
+          I will put all the tasks that I want gulp to complete during the development process.
+        </p>
+
+        <div class="image-holder">
+          <img src="../task-runner-images/creating-images.jpg" alt="">
+        </div>
+
+        <h3 class="sub-titles">How:</h3>
+        <p class="blog-content">
+          Time for the fun stuff. The tasks that I asked Gulp to run were to look at all the files, compile
+          them, and send them to a folder which I would then upload. However, two of the main tasks I asked
+          Gulp to complete involved optimising images and compiling Sass.
+        </p>
+
+        <p class="blog-content">
+          Some tasks require extra dev dependencies so that Gulp can run the tasks. To run a task which would
+          optimise images I had to set up the dependency the same way as I did with Gulp, <strong><code>npm install –save-dev
+              gulp-imagemin</code></strong>.
+        </p>
+
+        <div class="image-holder">
+          <img src="../task-runner-images/install-imagemin.jpg" alt="">
+        </div>
+
+        <p class="blog-content">
+          Now to set up the task. Back in the gulpfile.js I needed to tell Gulp to run the task as well as
+          telling it what to look for, where to look for it, and where to put the optimised image by using
+          the Gulp method: .pipe(gulp.dest(‘dist/images’)). When writing this code and running the task for
+          the first time, Gulp will automatically create the ‘dist’ folder.
+        </p>
+
+        <div class="image-holder">
+          <img src="../task-runner-images/gulp-imagemin.jpg" alt="">
+        </div>
+
+        <p class="blog-content">
+          Once the task was set up and the file is saved, I needed to back over to command line and run the task.
+        </p>
+
+        <div class="image-holder">
+          <img src="../task-runner-images/run-imagemin.jpg" alt="">
+        </div>
+
+        <p class="blog-content">
+          Setting up tasks in gulpfile.js all usually adopt the same method of installing extra dependencies and
+          setting up the task.
+        </p>
+
+        <p class="blog-content">
+          So, to have a task that compiles my Sass files, I have to go through the same steps that I had to go
+          through for the image optimisation task.
+        </p>
+
+        <p class="blog-content">
+          So… installing Sass to gulp is: <strong><code>npm install –save-dev gulp-sass</code></strong>.
+        </p>
+
+        <p class="blog-content">
+          Back into gulpfile.js. A similar syntax of the image optimisation task is used to create the Sass
+          compiler task. However, there are a few additional things that need to be added to run this task.
+        </p>
+
+        <p class="blog-content">
+          To start off, the task needs to be ran as a function. Again, we tell Gulp what to look for, where
+          to look for it, and where to distribute the compiled version. But now, a new method is added to
+          look for any errors that Sass may create. This is just a cautionary method. added to run this task.
+        </p>
+
+        <div class="image-holder">
+          <img src="../task-runner-images/gulp-sass.jpg" alt="">
+        </div>
+
+        <p class="blog-content">
+          Finally, we run the task using the same syntax as <strong><code>imageMin</code></strong>, which
+          will be replaced with sass.
+        </p>
+
+        <p class="blog-content">
+          As of now, every time I want a task to run after a file is saved or an image is added I have to
+          manually run all the tasks individually. Gulp allows you to set up a task which can run all the
+          tasks at the same time. This is done by setting a new task which takes all the task that have
+          already been created, and runs them all in a series. This task can save you from the tedious
+          task of running each task individually.
+        </p>
+
+        <div class="image-holder">
+          <img src="../task-runner-images/gulp-all-tasks.jpg" alt="">
+        </div>
+
+        <p class="blog-content">
+          So when I run just gulp in the command line, all the tasks run one after another.
+        </p>
+
+        <div class="image-holder">
+          <img src="../task-runner-images/run-all-tasks.jpg" alt="">
+        </div>
+
+        <br>
+        <br>
+
+        <p class="blog-content">
+          One final task I created told Gulp to run all the tasks at once without me having to run
+          them individually.
+        </p>
+
+        <div class="image-holder">
+          <img src="../task-runner-images/gulp-watch.jpg" alt="">
+        </div>
+
+        <p class="blog-content">
+          However, now this new task, <strong><code>watch</code></strong>, will watch all the tasks and
+          when any changes are made it will automatically run the task without me running gulp every change.
+        </p>
+
+        <div class="image-holder">
+          <img src="../task-runner-images/run-watch.jpg" alt="">
+        </div>
+
+        <h3 class="sub-titles">Evaluation:</h3>
+        <p class="blog-content">
+          After using the gulp.js task runner to help with my version control, I can now answer my question
+          that I asked myself; are task runners as good as they’re hyped up to be?
+        </p>
+
+        <p class="blog-content">
+          The answer is. Yes! Yes! Yes!
+        </p>
+
+        <p class="blog-content">
+          Task runners are a great tool to use when developing a project. Being able to create a variety
+          of different tasks to complete a variety of things automatically, that you would normally have to
+          manually do is a great feeling. And will save you more time than you think.
+        </p>
+
+        <p class="quote">
+          <i>
+            “You can specify which tasks you want a task runner to perform and it will do all the work
+            for you… each time that you make a change, you would have needed to complete each task
+            separately. That would get annoying really quick. Not to mention you would waste an egregious
+            amount of time repeating yourself. Not fun”
+          </i>
+          (DBS Interactive ,2018)
+        </p>
+
+        <p>Word Count: 1046</p>
+        <h3 class="reference-title">References:</h3>
+        <ul>
+          <li class="references">
+            Avery, D. (2017). NPMmmm #1: Dev Dependencies, Dependencies. [online] Medium. Available at: https://medium.com/@dylanavery720/npmmmm-1-dev-dependencies-dependencies-8931c2583b0c [Accessed 20 Mar. 2019].
+          </li>
+          <li class="references">
+            Interactive, D. (2018). The Advantages of Using Task Runners | DBS Interactive. [online] DBS Interactive. Available at: https://www.dbswebsite.com/blog/2015/02/24/the-advantages-of-using-task-runners/ [Accessed 20 Mar. 2019].
+          </li>
+          <li class="references">
+            Pennell, K. (n.d.). Why Use a Task Runner Like Gulp? | appendTo. [online] appendTo. Available at: https://appendto.com/2015/08/why-use-a-task-runner-like-gulp/ [Accessed 20 Mar. 2019].
+          </li>
+        </ul>
+        <a href="#top">
+          <div class="back-to-top-btn">Back To The Top</div>
+        </a>
+      </div>
+    </section>
+
+    <div id="contact-me" class="contact-me">
+      <h2 class="contact-title">Feel Free To Get In Touch!</h1>
+        <div class="contact-message">
+          <p>
+            If you think we could work together, or would just like to chat and get to know me.
+            Please, feel free to contact me on any of these!
+          </p>
+        </div>
+        <div class="contact-info">
+          <p>
+            <span class="cmo">Contact Me!</span> <br>
+            Email: joshuamartin964@googlemail.com <br>
+            Moblie: 07854 259 773 <br>
+          </p>
+          <hr>
+          <p class="socials">Socials:</p>
+          <div class="social-icons">
+            <a class="fb icons" href="https://www.facebook.com/josh.martin.73997" target="_blank"><img src="../images/facebook-logo.svg" alt="Facebook logo which directs you to Josh's Facebook profile" height="48" width="auto"></a>
+            <a class="instagram icons" href="https://www.instagram.com/joshmartin_98/" target="_blank"><img src="../images/instagram-logo.svg" alt="Instagram logo which directs you to Josh's Instagram profile" height="48" width="auto"></a>
+            <a class="github icons" href="https://github.com/joshuamartin964" target="_blank"><img src="../images/github-logo.svg" alt="GitHub logo which directs you to Josh's GitHub profile" height="48" width="auto"></a>
+            <a class="github icons" href="https://www.linkedin.com/in/joshua-martin-59963b135/" target="_blank"><img src="../images/linkedin-logo.svg" alt="LinkedIn logo which directs you to Josh's GitHub profile" height="48" width="auto"></a>
+          </div>
+        </div>
+
+        <form class="contact-form">
+          <span class="git">Get In Touch!</span>
+          <div class="details">
+            <input type="text" placeholder="Your Name" class="input">
+            <input type="text" placeholder="Your Email" class="input">
+          </div>
+          <div class="subject">
+            <input type="text" placeholder="Subject" class="input">
+          </div>
+          <div class="msg">
+            <textarea class="area" placeholder="Leave A Message"></textarea>
+          </div>
+          <div class="btn">Send Message!</div>
+        </form>
+    </div>
+  </main>
+</body>
+
+</html>

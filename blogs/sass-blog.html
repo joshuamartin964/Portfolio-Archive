@@ -37,76 +37,214 @@
       </a>
       <div class="blog-container">
         <h1 class="blog-title">Is Sass A Good Substitute For CSS?</h1>
+        <h3 class="sub-titles">Aim:</h3>
         <p class="blog-content">
-          Every developer, not matter the level of experience, will sometimes overlook
-          some of the import steps of creating a website. Important steps some developers
-          might miss out (including myself from time to time) involve the performance and
-          optimisation of: code; performance/optimisation of the sites loading time (how
-          long each page/piece of media takes to load on a user’s browser); SEO integration.
-          During this blog post, I will run over some steps you can take to make your website
-          the best it can be.
+          The aim of this project is to broaden my knowledge (the little amount of it) on the
+          CSS extention, Sass. I aim to learn and use Sass code correctly and in an efficient
+          manor by using a Sass compiler, such as Koala, to convert my Sass code into CSS.
         </p>
-        <h3 class="sub-titles">Code:</h3>
+        <br />
+        <br />
+        <h3 class="sub-titles">Objectives</h3>
         <p class="blog-content">
-          <span class="quote">
-            “Performance optimization is one of the biggest threats to your code” (Bloch, 2018)
-          </span>
-          When it comes to writing your code for your website, code validation is a very
-          important part of optimising your website. A simple way to help towards optimising
-          your code is to make sure it reads correctly. By indenting your code, using correct
-          and relevant class/id tags, and commenting your code when necessary will already make
-          your code easier to read for yourself, anyone who looks at your code, and anyone who
-          happens to work on your code after you. Having easy to read code really has an impact
-          on the optimisation of your site.
-          <br />
-          <br />
-          Another very crucial step you should always take is validating your code through W3C
-          Validator. This website allows you to upload pages of your site, one page at a time,
-          and the W3C will go through your code, line-by-line, and tell you if you have passed
-          the validation test or not. If you have not passed this test, W3C will highlight lines
-          in your code that either need changing or are just a warning. By running your code
-          through W3C Validator you are ensuring that your code will be on its way to having the
-          best performance it can.
+          My main objectives are:
+          <ul>
+            <li>To learn about Sass and why using it is a suitable substitute for CSS</li>
+            <li>To learn about Sass compilers and why they are a useful tool to use alongside Sass</li>
+            <li>To use Sass in my code to make my code more efficient</li>
+          </ul>
         </p>
-        <h3 class="sub-titles">Optimisation:</h3>
+        <br>
+        <br>
+        <h3 class="sub-titles">Definition:</h3>
         <p class="blog-content">
-          When it comes to optimising your site, it can mean a couple of things. Two of the main
-          meaning is behind optimised media and the load time of the site. When it comes to optimising
-          media, in my opinion I believe it is one of the most important things. A blog titled “What
-          is image optimization and why is it important for a website?” questions that if we were to
-          find a way to reduce the size of an images file size without affecting the images quality,
-          then we would have a positive impact on the users-experience on our sites (Sharma, 2018).
-          By reducing the size of an image originally in PhotoShop and then further that by using a
-          site such as tinypng.com, then the performance of the site will increase positively.
-          <br />
-          <br />
-          Other methods you can use is running your website through web performance checker. Using sites
-          such as google PageSpeed can help you check the speed and loading times of your pages. This will
-          help you to check if your site loads within a decent time (under 3 seconds) on different browsers
-          with different connection strengths.
+          I will use the CSS extension Sass to learn the code to see if using Sass to develop the design
+          of my website. To do this I will be looking at Sass’ nesting features, functions, and media query
+          includes. As well as applying variables for fonts and colours that may be used many times throughout
+          my code.
         </p>
-        <h3 class="sub-titles">SEO Integration:</h3>
         <p class="blog-content">
-          SEO (Search Engine Optimisation) can be whittled down to quality of code. Making sure that
-          you have well written, semantic code is the best way to have good SEO. Using the likes of
-          SEO analysers can help you run through your code and make sure it is SEO ready. Focusing on
-          using correct and relevant: alt text; social media links; good meta data descriptions all
-          help to aiding your SEO integration.
-          <br />
-          <br />
+          To help me compile my Sass code (and all other code) I will be using a compiler application: Koala.
         </p>
-        <p>Word Count: 548</p>
+        <br>
+        <br>
+        <h3 class="sub-titles">Set Up:</h3>
+        <p class="blog-content">
+          Before I could start coding in Sass, I needed to install it to my computer by using Cmder.
+          A command line emulator which I would use to install the latest version of Sass as a Node.js
+          package by entering <strong><code>npm install –g sass</code></strong>.
+        </p>
+        <p class="blog-content">
+          Once Sass was installed and the Sass file was
+          created in my project folder, I had to add the Sass file to my compiler, Koala.
+        </p>
+
+        <div class="image-holder">
+          <img src="../sass-images/koala.jpg" alt="">
+          <p class="image-description">
+            Adding the folder to Koala so that it can automatically compile the sass file into CSS
+          </p>
+        </div>
+
+        <p class="blog-content">
+          Koala’s user interface shows that the main.scss is highlighted green, as this is the file
+          that is being compiled. The main.css file is greyed out as this is the file where all the
+          Sass code will be outputted.
+        </p>
+
+        <div class="image-holder">
+          <img src="../sass-images/koala-success.jpg" alt="">
+          <p class="image-description">
+            This alert informs us that the save and compile of the Sass file was a success.
+          </p>
+        </div>
+
+        <h3 class="sub-titles">How:</h3>
+        <p class="blog-content">
+          To demonstrate how I learned and used Sass, I decided to create a basic landing page with some
+          minimal content as to focus more on coding the Sass.
+        </p>
+        <p class="blog-content">
+          One of the great things about using Sass is the ability to use variables.
+        </p>
+        <p class="quote">
+          <i>
+            “Think of variables as a way to store information that you want to reuse
+            throughout your stylesheet. You can store things like colors, font stacks,
+            or any CSS value you think you'll want to reuse.”
+          </i>
+          (Sass-lang.com, n.d)
+        </p>
+        <p class="blog-content">
+          Variables allow you to define a value for a property, such as the main body font size, and call
+          upon it multiple times within the code. The useful thing about Sass variables is, if the size
+          of the font needs to change and the code has been written many times, just by changing the value
+          of the variable, will update the new value for wherever the variable is called in the code.
+        </p>
+
+        <div class="image-holder">
+          <img src="../sass-images/variable-sass.jpg" alt="">
+          <p class="image-description">
+            This shows some variables being defined and how you reference them as a value.
+          </p>
+        </div>
+
+        <div class="image-holder">
+          <img src="../sass-images/variable-css.jpg" alt="">
+          <p class="image-description">
+            How it looks in CSS
+          </p>
+        </div>
+
+        <p class="blog-content">
+          Media queries are a vital in modern web development. Allowing a website to accommodate all device
+          sizes from desktop to mobile is a curtail part of making a website accessible.
+        </p>
+        <p class="quote">
+          <i>
+            “Media queries let you adapt your site or app depending on the presence or value of various
+            device characteristics and parameters… they are a key component of responsive design.”
+          </i>
+          (MND Web Docs, 2019)
+        </p>
+        <br>
+        <br>
+        <p class="blog-content">
+          Sass reduces the tedious code writing that comes with writing media queries. To implement media
+          queries you can define the minimum width, like you normally would e.g. <strong><code>min-width: 840px;</code></strong>, as a
+          variable which you then feed into <strong><code>mixin</code></strong> function.
+        </p>
+
+        <div class="image-holder">
+          <img src="../sass-images/minmix.jpg" alt="">
+        </div>
+
+        <p class="blog-content">
+          By using this <strong><code>mixin</code></strong> function, you can add an <strong><code>include</code></strong> to the section of the site that would need
+          editing on a smaller screen (or larger when doing a mobile first approach). Turning this:
+        </p>
+
+        <div class="image-holder">
+          <img src="../sass-images/include.jpg" alt="">
+        </div>
+
+        <p class="quote">
+          <i>
+            “Nesting in Sass allows you to write descendant selectors in a syntax that is more natural
+            and easier to read.”
+          </i>
+          (Belman, 2016)
+        </p>
+
+        <p class="blog-content">
+          Nesting is a very useful feature that Sass has over CSS. Nesting is a clean way of writing code
+          were the parent and child properties values need to be defined together. In my code for my demonstrator
+          I needed to define properties for the #bg which was in the body html tag. Usually in CSS to write any
+          code for this you would write it like this:
+        </p>
+
+        <div class="image-holder">
+          <img src="../sass-images/nesting-css.jpg" alt="">
+        </div>
+
+        <p class="blog-content">
+          Sass’ syntax makes this code easier to read and understand as you can clearly see what the #bg is a
+          child of this:
+        </p>
+
+        <div class="image-holder">
+          <img src="../sass-images/nesting-sass.jpg" alt="">
+        </div>
+
+        <p class="blog-content">
+          Functions are another helpful feature that Sass has and work the same way that functions work in
+          other languages, like JavaScript. I used a function to pass through different colour variables I had
+          used. This function allowed me to define variables for each colour I was going to use in the
+          demonstrator within a parent variable.
+        </p>
+
+        <div class="image-holder">
+          <img src="../sass-images/colors-variable.jpg" alt="">
+          <p class="image-description">
+            All the different colour variables within the parent variable.
+          </p>
+        </div>
+
+        <div class="image-holder">
+          <img src="images/blog-images/sass-images/color-function.jpg" alt="" width="700">
+          <p class="image-description">
+            The function to run the variables.
+          </p>
+        </div>
+
+        <p class="blog-content">
+          To then refer to this function and call a specific colour variable, all I had to do to was write
+          <strong><code>background-color: color(primary)</code></strong>;
+        </p>
+
+        <h3 class="sub-titles">Evaluation:</h3>
+        <p class="blog-content">
+          After using Sass as appose to CSS I can now answer my question that I asked myself; is Sass a
+          good substitute for CSS?
+        </p>
+        <p class="blog-content">
+          And my answer is no. I think Sass is a good partner to CSS. Using Sass to write your code and
+          compiling into CSS is a good method to writing code. The readability and features that Sass has
+          over CSS is a big benefit. However, being able to automatically compile the Sass code into CSS
+          with a compiler, such as Koala, is the way forward with modern front-end development.
+        </p>
+
+        <p>Word Count: 931</p>
         <h3 class="reference-title">References:</h3>
         <ul>
           <li class="references">
-            Bloch, K. (2018). [Blog] Code Optimization: The Optimal Way to Optimize. Available at: https://www.toptal.com/full-stack/code-optimization [Accessed 12 Nov. 2018].
+            Belman, V. (2016). Nesting benefits in LESS/SASS. [online] Medium. Available at: https://medium.com/@vitalyb/nesting-benefits-in-less-sass-371fd447fc59 [Accessed 22 Mar. 2019].
           </li>
           <li class="references">
-            Johnson, E. (2018). 5 Simple Ways to Incorporate SEO into Your Content. [online] B2B Tech PR Agency and Digital Marketing Firm. Available at: https://www.walkersands.com/5-simple-ways-to-incorporate-seo-into-your-content/ [Accessed 12
-            Nov. 2018].
+            MDN Web Docs. (2019). Media queries. [online] Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries [Accessed 22 Mar. 2019].
           </li>
           <li class="references">
-            Sharma, S. (2018). What is Image Optimization and why is it Important for a Website?. [online] ImageKit.io. Available at: https://imagekit.io/blog/image-optimization-its-importance/ [Accessed 12 Nov. 2018].
+            Sass-lang.com. (n.d.). Sass: Sass Basics. [online] Available at: https://sass-lang.com/guide [Accessed 22 Mar. 2019].
           </li>
         </ul>
         <a href="#top">

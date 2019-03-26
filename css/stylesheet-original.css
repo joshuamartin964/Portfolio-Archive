@@ -1,9 +1,12 @@
 /*ROOT STYLING*/
 /*HTML STYLE*/
+
+
 html {
   box-sizing: border-box;
   font-weight: 200; }
-  html:after, html:before {
+
+html:after, html:before {
     box-sizing: border-box; }
 
 /*MAIN STYLING*/
@@ -337,15 +340,6 @@ nav a:hover::before {
 .sub-titles {
   font-size: 22px; }
 
-.quote {
-  width: 80%;
-  margin: 50px auto;
-  background: linear-gradient(to right, #020024 0%, #790909 50%, #7e0075 100%);
-  color: white;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 10px 30px black; }
-
 .back-to-top-btn {
   float: right;
   width: auto;
@@ -370,9 +364,6 @@ nav a:hover::before {
     font-size: 20px; }
   .sub-titles {
     font-size: 30px; }
-  .quote {
-    width: 50%;
-    margin: 100px auto; }
   .blog-container {
     border-left: 10px solid #444;
     border-bottom: 10px solid #444;
